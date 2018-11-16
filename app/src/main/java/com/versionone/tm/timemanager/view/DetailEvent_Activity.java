@@ -48,6 +48,23 @@ public class DetailEvent_Activity extends AppCompatActivity {
                 showDialog();
             }
         });
+        
+        //++++重新编辑事件添加处  
+        ReeditBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent(getApplicationContext(),Reedit_Activity.class);
+                startIntent.putExtra("eventID",e.getId());
+                startIntent.putExtra("titleText",e.getTitle());
+                startIntent.putExtra("DateText",e.getDate());
+                startIntent.putExtra("ContentText",e.getContent());
+
+
+                startActivity(startIntent);
+            }
+        });
+        
+        
     }
     private void showDialog(){
         /* @setIcon 设置对话框图标
