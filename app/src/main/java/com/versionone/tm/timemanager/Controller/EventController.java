@@ -67,8 +67,11 @@ public class EventController {
     }
 
     //修改事件
-    public void reeditEvent(int id){
-
+    public void reeditEvent(int id,String title, String Content,String Date,DBManager db){
+        event event = new event(id,title,Content,null,null,null,Date);
+        db.open();
+        db.reedit(event);
+        db.close();
     }
 
     //同步事件
