@@ -191,8 +191,19 @@ public class DBManager extends SQLiteOpenHelper {
         //Log.i("DBManager", "delete删除了" + deleteCount);
         return deleteCount;
     }
-
-
+    //重新编辑事件
+    public void  reedit(event event) {// 根据id删除
+        String title  = event.getTitle();
+        String content=event.getContent();
+        String date = event.getDate();
+        int id= event.getId();
+        ContentValues values =new ContentValues();
+        values.put("title",title);
+        values.put("content",content);
+        values.put("date",date);
+        db.update(TBL_NAME_event, values, "id=?", new String[]{""+id});
+        Log.i("***********"," successful in update event ");
+    }
 
 
 
