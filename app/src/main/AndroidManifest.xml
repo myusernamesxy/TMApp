@@ -16,11 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".view.Reedit_Activity"/>
         <activity android:name=".view.Register_Activity"></activity>
         <activity android:name=".view.Changepassword_Activity"></activity>
         <activity android:name=".view.MainEvent_Activity"></activity>
         <activity android:name=".view.CreateEvent_Activity"></activity>
         <activity android:name=".view.DetailEvent_Activity"></activity>
+        <service android:name=".tools.Alarm_Notification"/>
     </application>
 
 
